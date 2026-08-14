@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="S. Arun — Full Stack Developer portfolio inspired by pixel fantasy, backend systems, GIS, ERP and production-grade web apps."
+    />
+    <title>S.Arun Meets Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:wght@400;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="gate" id="gate" aria-label="Welcome gate">
+      <div class="gate-dialog">
+        <h1>Hello <span>mighty hero</span>!</h1>
+        <p>Are you ready to venture forth?</p>
+        <button id="enter-site" type="button">I’m ready</button>
+      </div>
+    </section>
+
+    <audio id="theme-audio" src="assets/anvil-of-crom.mp3" preload="auto" loop controls></audio>
+
+    <main id="site">
+      <section class="hero-scene" id="home">
+        <div class="night-sky" aria-hidden="true">
+          <img src="assets/the-stars.png" alt="" />
+          <img src="assets/the-clouds-left.png" alt="" />
+          <img src="assets/the-clouds-right.png" alt="" />
+        </div>
+
+        <div class="brand-scene">
+          <img
+            class="title-art"
+            src="assets/barbarian-meets-coding-new-title-v1-big-transparent.png"
+            alt="Barbarian Meets Coding"
+          />
+        </div>
+
+        <div class="world" aria-hidden="true">
+          <img class="world-land" src="assets/the-land.png" alt="" />
+          <img class="world-temple" src="assets/the-temple.png" alt="" />
+          <img class="world-light" src="assets/the-light.gif" alt="" />
+          <img class="world-hero" src="assets/conan-axe.gif" alt="" />
+        </div>
+
+        <button class="scroll-cue" type="button" aria-label="Scroll to intro">
+          <span></span><span></span><span></span>
+        </button>
+      </section>
+
+      <section class="kingdom">
+        <img class="kingdom-throne" src="assets/the-throne.png" alt="" />
+        <img class="kingdom-light" src="assets/the-light.gif" alt="" />
+        <div class="kingdom-content">
+          <img class="face" src="assets/conan-face.webp" alt="Pixel warrior face" />
+          <div>
+            <h2>Hello Traveller!</h2>
+            <p>
+              I’m <strong>S.Arun</strong>, full stack developer and guardian of production-ready
+              systems. In my domain, you’ll find scalable APIs, enterprise dashboards, mobile apps,
+              geospatial platforms and a little pinch of fantasy.
+            </p>
+            <p class="orange">
+              Ready your stack! Explore case studies, skills, experience and ways to summon me for
+              your next software quest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <header class="site-header">
+        <div class="header-brand">
+          <img src="assets/barbarian-meets-coding-title.webp" alt="S Arun Meets Coding" />
+          <p>Full Stack · GIS · ERP · Mobile</p>
+        </div>
+        <nav class="paper-nav" aria-label="Main navigation">
+          <a href="#about">About Me</a>
+          <a href="#case-studies">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a href="S_Arun_CV.docx" download>Resume</a>
+        </nav>
+      </header>
+
+      <section class="featured" id="about">
+        <article class="featured-copy">
+          <span class="label">Featured</span>
+          <h2>Full Stack Developer</h2>
+          <p>
+            Full Stack Software Engineer with 2+ years of experience designing, developing and
+            deploying scalable web and mobile applications for Defence, Manufacturing, Education and
+            E-commerce domains.
+          </p>
+          <p>
+            I specialize in backend architecture, REST APIs, GIS apps, database design, cloud
+            deployment and secure role-based systems.
+          </p>
+        </article>
+        <img class="featured-image" src="assets/take-pleasure-in-the-process.webp" alt="Highlighted quote about enjoying the process" />
+      </section>
+
+      <section class="series" id="case-studies">
+        <article class="series-card">
+          <span class="corner-label">Case Study</span>
+          <h2>Geospatial Defence Platform</h2>
+          <p class="subtitle">Mission planning · 3D terrain · offline maps</p>
+          <img src="assets/the-temple.png" alt="" />
+          <p>
+            Secure enterprise-scale platform with spatial analysis, map editing tools, GeoServer
+            services, offline tile caching and multi-layer visualization.
+          </p>
+          <ul>
+            <li>35+ REST APIs</li>
+            <li>8+ GIS modules</li>
+            <li>CesiumJS, Flask, Angular, PostgreSQL</li>
+          </ul>
+        </article>
+
+        <article class="series-card">
+          <span class="corner-label">Case Study</span>
+          <h2>Textile Monitoring System</h2>
+          <p class="subtitle">Dashboards · analytics · WhatsApp alerts</p>
+          <img src="assets/vim-in-the-browser.webp" alt="" />
+          <p>
+            Replaced manual monitoring with live production dashboards, machine analytics, downtime
+            reports, shift summaries and business alerts.
+          </p>
+          <ul>
+            <li>40+ REST APIs</li>
+            <li>Real-time reports</li>
+            <li>FastAPI, Flutter, React, SQL Server</li>
+          </ul>
+        </article>
+
+        <article class="series-card">
+          <span class="corner-label">Case Study</span>
+          <h2>School Management ERP</h2>
+          <p class="subtitle">Attendance · exams · fees · admin</p>
+          <img src="assets/javascriptmancy-series-cover.webp" alt="" />
+          <p>
+            Complete ERP for institutions: student, staff, attendance, exams, fee management,
+            authentication and responsive admin dashboards.
+          </p>
+          <ul>
+            <li>50+ backend APIs</li>
+            <li>Role-based authentication</li>
+            <li>FastAPI, Flutter, Next.js, PostgreSQL</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="topics" id="skills">
+        <h2>Featured Skills</h2>
+        <div class="topic-tags">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>React</span>
+          <span>Angular</span>
+          <span>Flutter</span>
+          <span>GIS</span>
+        </div>
+        <h2>And More Cool Stuff In This Portfolio...</h2>
+        <div class="footer-cards">
+          <article>
+            <h3>Backend</h3>
+            <p>REST APIs, microservices architecture, RBAC, reporting and enterprise workflows.</p>
+          </article>
+          <article>
+            <h3>Frontend</h3>
+            <p>React.js, Next.js, Angular 19+, Tailwind CSS and responsive dashboards.</p>
+          </article>
+          <article>
+            <h3>Mobile</h3>
+            <p>Flutter applications for production operations, education and business systems.</p>
+          </article>
+          <article>
+            <h3>Data & GIS</h3>
+            <p>PostgreSQL, SQL Server, CesiumJS, GeoServer, Google Maps and tile caching.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <h2>Career Campaign</h2>
+        <div class="quest-list">
+          <article>
+            <time>2026 – Present</time>
+            <h3>XOZO Technology Pvt Ltd</h3>
+            <p>
+              Led 3 developers, delivered 4+ production apps, designed 120+ APIs, worked directly
+              with clients and mentored junior developers.
+            </p>
+          </article>
+          <article>
+            <time>2025</time>
+            <h3>TNL Technologies Private Limited</h3>
+            <p>
+              Built business applications, scalable backend services, secure authentication,
+              reporting and data management modules.
+            </p>
+          </article>
+          <article>
+            <time>2024</time>
+            <h3>Big Bang Boom Solutions Pvt. Ltd.</h3>
+            <p>
+              Contributed to secure defence software, geospatial features, debugging, testing,
+              deployment and maintenance.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bookish">
+        <div>
+          <h2>Did Ya Know I Build Production Apps?</h2>
+          <p>
+            I have! My work blends backend engineering, UI development, databases and deployments.
+            The result: useful software for real-world teams, with clean architecture and a tiny
+            sprinkle of battle-tested magic.
+          </p>
+          <a href="#contact">Tell Me More!!</a>
+        </div>
+        <img src="assets/boost-your-coding-fu-with-vscode-and-vim-3d-book-cover-no-shadow.webp" alt="" />
+      </section>
+    </main>
+
+    <footer class="copyright" id="contact">
+      <p>© 2026 S. Arun. Full Stack Developer.</p>
+      <p>
+        <a href="mailto:arunsubramani1607@gmail.com">arunsubramani1607@gmail.com</a> ·
+        <a href="tel:+919361499299">+91 93614 99299</a> · Salem, Tamil Nadu
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

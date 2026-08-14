@@ -805,6 +805,7 @@ footer[id] {
 
   #theme-audio {
     left: 1rem;
+    position: absolute;
     right: 1rem;
     top: 0.75rem;
     width: calc(100% - 2rem);
@@ -871,7 +872,7 @@ footer[id] {
   }
 
   .kingdom {
-    padding: 6rem 1rem 3rem;
+    padding: 3.5rem 1rem 3rem;
   }
 
   .kingdom-content {
@@ -880,7 +881,7 @@ footer[id] {
 
   .face {
     margin-inline: auto;
-    width: 130px;
+    width: 120px;
   }
 
   .kingdom h2 {
@@ -890,7 +891,7 @@ footer[id] {
   }
 
   .kingdom p {
-    font-size: clamp(0.86rem, 3.7vw, 1.1rem);
+    font-size: clamp(0.8rem, 3.45vw, 1.05rem);
     line-height: 1.75;
   }
 

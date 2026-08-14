@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   line-height: 1.45;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 body.gate-open {
@@ -46,6 +49,16 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 1rem;
 }
 
 .gate {
@@ -69,7 +82,16 @@ img {
 }
 
 .gate-dialog {
+  max-width: 52rem;
+  min-width: 0;
+  padding: 1.5rem;
   transform: translateY(-2vh);
+  width: 100%;
+}
+
+.gate-dialog h1,
+.gate-dialog p {
+  overflow-wrap: anywhere;
 }
 
 .gate h1,
@@ -114,6 +136,7 @@ img {
 .hero-scene {
   background: linear-gradient(#1c1430 0%, #9edcf4 47%, #0f1c26 83%);
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   position: relative;
 }
@@ -314,6 +337,7 @@ img {
     #310b04;
   color: #fff;
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   padding: 10rem 6vw 4rem;
   position: relative;
@@ -439,6 +463,15 @@ img {
 .paper-nav a:hover {
   background: #fff;
   color: var(--orange);
+}
+
+.paper-nav a:focus-visible,
+.bookish a:focus-visible,
+.copyright a:focus-visible,
+.gate button:focus-visible,
+.scroll-cue:focus-visible {
+  outline: 4px solid var(--orange);
+  outline-offset: 5px;
 }
 
 .featured {
@@ -729,6 +762,29 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .header-brand {
+    text-align: center;
+  }
+
+  .header-brand img {
+    margin-inline: auto;
+    width: min(620px, 80vw);
+  }
+
+  .header-brand p {
+    margin: 0.5rem 0 0;
+  }
+
+  .featured-image {
+    justify-self: center;
+    margin-top: 0;
+  }
+
+  .bookish img {
+    justify-self: center;
+    width: min(320px, 70vw);
+  }
+
   .series-card {
     min-height: auto;
   }
@@ -744,15 +800,46 @@ img {
 
 @media (max-width: 720px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   #theme-audio {
-    width: 235px;
+    left: 1rem;
+    right: 1rem;
+    top: 0.75rem;
+    width: calc(100% - 2rem);
+  }
+
+  .gate-dialog {
+    padding: 1rem;
+  }
+
+  .gate h1 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .gate p {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+
+  .gate button {
+    min-height: 48px;
+  }
+
+  .hero-scene {
+    min-height: 100svh;
+  }
+
+  .brand-scene {
+    left: 50%;
+    top: max(6.5rem, 14svh);
+    transform: translateX(-50%);
+    width: 92vw;
   }
 
   .title-art {
-    width: 82vw;
+    margin-inline: auto;
+    width: 100%;
   }
 
   .terminal-title {
@@ -760,8 +847,27 @@ img {
   }
 
   .world {
-    left: 18%;
-    width: 90vw;
+    bottom: 6svh;
+    height: auto;
+    left: 50%;
+    transform: translateX(-42%);
+    width: min(104vw, 680px);
+  }
+
+  .world-land {
+    position: relative !important;
+  }
+
+  .scroll-cue {
+    bottom: 1.5rem;
+    gap: 0.7rem;
+    right: 1.25rem;
+  }
+
+  .scroll-cue span {
+    border-left-width: 11px;
+    border-right-width: 11px;
+    border-top-width: 24px;
   }
 
   .kingdom {
@@ -770,6 +876,22 @@ img {
 
   .kingdom-content {
     grid-template-columns: 1fr;
+  }
+
+  .face {
+    margin-inline: auto;
+    width: 130px;
+  }
+
+  .kingdom h2 {
+    font-size: clamp(1.65rem, 8vw, 2.4rem);
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .kingdom p {
+    font-size: clamp(0.86rem, 3.7vw, 1.1rem);
+    line-height: 1.75;
   }
 
   .kingdom-throne {
@@ -794,5 +916,220 @@ img {
   .bookish {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .site-header {
+    border-bottom-width: 10px;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .header-brand img {
+    width: min(92vw, 480px);
+  }
+
+  .header-brand p {
+    font-size: clamp(1.2rem, 6vw, 1.65rem);
+  }
+
+  .paper-nav {
+    gap: 0.65rem;
+  }
+
+  .paper-nav a {
+    font-size: clamp(1.1rem, 5.8vw, 1.65rem);
+    padding: 0.3rem 0.55rem;
+  }
+
+  .featured,
+  .series,
+  .topics,
+  .experience,
+  .bookish {
+    padding-bottom: 3.5rem;
+    padding-top: 3.5rem;
+  }
+
+  .featured,
+  .series {
+    gap: 2.5rem;
+  }
+
+  .featured h2,
+  .series-card h2,
+  .topics h2,
+  .experience h2,
+  .bookish h2 {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+    overflow-wrap: anywhere;
+  }
+
+  .featured-image {
+    border-width: 4px;
+    width: 100%;
+  }
+
+  .series-card {
+    border-width: 6px;
+    padding: 2.4rem 1.1rem 1.5rem;
+  }
+
+  .series-card h2 {
+    font-size: clamp(1.8rem, 9vw, 2.7rem);
+  }
+
+  .series-card img {
+    height: min(52vw, 210px);
+    margin: 2rem auto;
+  }
+
+  .series-card p,
+  .series-card li {
+    font-size: 1rem;
+  }
+
+  .series-card ul {
+    padding-left: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem !important;
+    line-height: 1.2;
+    margin-top: -1rem;
+  }
+
+  .corner-label,
+  .label {
+    font-size: 1rem;
+  }
+
+  .topic-tags {
+    gap: 0.8rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .topic-tags span {
+    font-size: clamp(1.35rem, 8vw, 2.2rem);
+    padding: 0.4rem 0.7rem;
+  }
+
+  .footer-cards {
+    gap: 1.25rem;
+  }
+
+  .footer-cards article {
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-cards h3 {
+    margin-bottom: 1rem;
+  }
+
+  .footer-cards p {
+    font-size: 1rem;
+  }
+
+  .quest-list article {
+    border-width: 5px;
+    box-shadow: 6px 6px 0 #dedede;
+    padding: 1.25rem 1rem;
+  }
+
+  .quest-list h3 {
+    font-size: clamp(1.6rem, 8vw, 2.3rem);
+    overflow-wrap: anywhere;
+  }
+
+  .bookish {
+    text-align: center;
+  }
+
+  .bookish p {
+    font-size: 1.05rem;
+  }
+
+  .bookish a {
+    font-size: 1.45rem;
+    max-width: 100%;
+  }
+
+  .bookish img {
+    width: min(230px, 68vw);
+  }
+
+  .copyright {
+    min-height: 0;
+    padding: 2.5rem 1rem;
+  }
+
+  .copyright a {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .paper-nav a {
+    font-size: 1rem;
+  }
+
+  .kingdom {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .series-card {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+  #theme-audio {
+    left: auto;
+    right: 0.75rem;
+    top: 0.75rem;
+    width: min(300px, 42vw);
+  }
+
+  .brand-scene {
+    left: 3vw;
+    top: 1.5rem;
+    transform: none;
+    width: min(42vw, 390px);
+  }
+
+  .world {
+    bottom: -12vh;
+    left: 46%;
+    transform: none;
+    width: min(58vw, 650px);
+  }
+
+  .gate-dialog {
+    transform: none;
+  }
+
+  .gate h1,
+  .gate p {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
